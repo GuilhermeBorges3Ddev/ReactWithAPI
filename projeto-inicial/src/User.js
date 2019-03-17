@@ -7,8 +7,9 @@ class User extends Component {
         <div>
           Name: {this.props.name}
         </div>
-        <div>
-          Foto: <img src={this.props.photo} /> 
+        <span>Photo:</span>
+        <div className="pt-2 mb-3"> 
+          <img src={this.props.photo} /> 
         </div>
       </div>
     );
