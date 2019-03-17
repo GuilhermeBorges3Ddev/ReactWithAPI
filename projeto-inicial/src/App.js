@@ -5,18 +5,25 @@ import Eva from './Eva';
 class App extends Component {
 
   //Constructor was build to manipulate the state of the father component
-  constructor(){
+  constructor(props){
     super(props)
     this.state = {
       name: "Eva.js component"
     }
     this.changeState = this.changeState.bind(this)
+    this.resetState = this.resetState.bind(this)
   }
 
   //Modifying the state
   changeState(){
     this.setState({
       name: "Eva.js is the main component, state CHANGED"
+    })
+  }
+
+  resetState(){
+    this.setState({
+      name: "Eva.js component"
     })
   }
 
@@ -28,6 +35,7 @@ class App extends Component {
         </div>
         <div>
           <button onClick={this.changeState}>Mudar estado</button>
+          <button onClick={this.resetState}>Resetar estado</button>
         </div>
         {/*
         ----> This comment can be removed to use simple props without state 
