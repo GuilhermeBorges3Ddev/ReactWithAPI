@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.svg';
 import Eva from './Eva';
 
 class App extends Component {
@@ -30,23 +31,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          {this.state.name}
-        </div>
-        <div>
-          <button onClick={this.changeState}>Mudar estado</button>
-          <button onClick={this.resetState}>Resetar estado</button>
-        </div>
-        {/*
-        ----> This comment can be removed to use simple props without state 
+       
+        
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
              Project React.JS mounted using NodeJS!
           </p>
           <Eva></Eva>
+          <div>
+            {this.state.name}
+          </div>
+          <div>
+            <button onClick={this.changeState}>Change state</button>
+            <button onClick={this.resetState}>Reset state</button>
+          </div>
         </header>
-        */}
+       
       </div>
     );
   }
