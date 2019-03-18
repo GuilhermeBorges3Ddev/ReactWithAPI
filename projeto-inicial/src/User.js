@@ -9,7 +9,7 @@ class User extends Component {
         </div>
         <span>Photo:</span>
         <div className="pt-2 mb-3"> 
-          <img src={this.props.photo} /> 
+          <img src={this.props.photo} alt="state-vs-props"/> 
         </div>
       </div>
     );
