@@ -12,12 +12,14 @@ class App extends Component {
       name: "Eva.js component",
       email: "eva.official@gmail.com"
     }
+    //These two methods give a state-change into two buttons component
     this.changeState = this.changeState.bind(this)
     this.resetState = this.resetState.bind(this)
+    //This other method are used to change the 'value' of each form section 
     this.changeInput = this.changeInput.bind(this)
   }
 
-  //Modifying the state
+  //Modifying the state on event 'onClick()'
   changeState(){
     this.setState({
       name: "Eva.js is the main component, state CHANGED"
@@ -30,6 +32,7 @@ class App extends Component {
     })
   }
 
+//Email and name change dinamically when an digit action is active
   changeInput(event){
     let target = event.target
     let index = target.name
