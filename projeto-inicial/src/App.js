@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import Eva from './Eva';
+//This component contains a name and an email of two users, distructured by map()
+import List from './List';
 
 class App extends Component {
 
@@ -76,6 +78,9 @@ class App extends Component {
           <div>
             <button onClick={this.changeState}>Change state</button>
             <button onClick={this.resetState}>Reset state</button>
+          </div>
+          <div>
+            <List />
           </div>
         </header>
        
