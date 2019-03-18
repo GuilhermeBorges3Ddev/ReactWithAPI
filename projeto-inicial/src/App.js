@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import Eva from './Eva';
+//This component contains a name and an email of two users, distructured by map()
+import List from './List';
 
 class App extends Component {
 
@@ -12,12 +14,14 @@ class App extends Component {
       name: "Eva.js component",
       email: "eva.official@gmail.com"
     }
+    //These two methods give a state-change into two buttons component
     this.changeState = this.changeState.bind(this)
     this.resetState = this.resetState.bind(this)
+    //This other method are used to change the 'value' of each form section 
     this.changeInput = this.changeInput.bind(this)
   }
 
-  //Modifying the state
+  //Modifying the state on event 'onClick()'
   changeState(){
     this.setState({
       name: "Eva.js is the main component, state CHANGED"
@@ -30,6 +34,7 @@ class App extends Component {
     })
   }
 
+//Email and name change dinamically when an digit action is active
   changeInput(event){
     let target = event.target
     let index = target.name
@@ -73,6 +78,9 @@ class App extends Component {
           <div>
             <button onClick={this.changeState}>Change state</button>
             <button onClick={this.resetState}>Reset state</button>
+          </div>
+          <div>
+            <List />
           </div>
         </header>
        
