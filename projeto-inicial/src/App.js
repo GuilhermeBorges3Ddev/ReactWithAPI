@@ -53,16 +53,17 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           {/* Configurating the route*/}
-            <div className="container">
-              <div className="row">
-                  <div className="d-flex">
+            <table>
+              <tr>
+                  <th>
                     <Link to="/" style={{ color: '#FFF' }}>Home</Link>
-                  </div>
-                  <div className="d-flex">
+                  </th>
+                  <th></th>
+                  <th>
                     <Link to="/user" style={{ color: '#FFF' }}>User</Link>
-                  </div>
-              </div>
-            </div>
+                  </th>
+              </tr>
+            </table>
           <p>
              Project React.JS mounted using NodeJS!
           </p>
