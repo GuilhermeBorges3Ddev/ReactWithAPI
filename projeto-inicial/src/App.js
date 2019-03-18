@@ -6,6 +6,7 @@ import Eva from './Eva';
 import List from './List';
 //Components to do a route-map
 import { Link, Route} from 'react-router-dom'
+import routesConfig from './routesConfig';
 
 class App extends Component {
 
@@ -47,8 +48,9 @@ class App extends Component {
 
   render() {
     return (
+    <div className="Routering">
       <div className="App">
-       
+
       {/* Configurating the route*/}
       <Link to="/">Home</Link>
       <Link to="/user">User</Link>
@@ -90,6 +92,15 @@ class App extends Component {
         </header>
        
       </div>
+      {routesConfig.map((value, key) => {
+        return <Route
+          key={key}
+          path={value.path}
+          component={value.component}
+          exact={value.exact} 
+        ></Route>
+      })}
+    </div>  
     );
   }
 }
