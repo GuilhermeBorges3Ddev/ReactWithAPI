@@ -9,10 +9,12 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      name: "Eva.js component"
+      name: "Eva.js component",
+      email: "eva.official@gmail.com"
     }
     this.changeState = this.changeState.bind(this)
     this.resetState = this.resetState.bind(this)
+    this.changeInput = this.changeInput.bind(this)
   }
 
   //Modifying the state
@@ -28,6 +30,14 @@ class App extends Component {
     })
   }
 
+  changeInput(event){
+    let target = event.target
+    let index = target.name
+    this.setState({
+      [index]:target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -40,7 +50,25 @@ class App extends Component {
           </p>
           <Eva></Eva>
           <div>
-            {this.state.name}
+            <form>
+              <label>Name:
+                <input 
+                  type="text" 
+                  name="name"
+                  value={this.state.name}
+                  onChange={this.changeInput}
+                ></input>
+              </label>
+              <label>Email:
+                <input 
+                  type="email" 
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.changeInput}
+                ></input>  
+              </label>
+            </form>
+            {this.state.name} - {this.state.email}
           </div>
           <div>
             <button onClick={this.changeState}>Change state</button>
