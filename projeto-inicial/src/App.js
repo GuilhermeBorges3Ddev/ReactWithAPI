@@ -4,6 +4,9 @@ import logo from './logo.svg';
 import Eva from './Eva';
 //This component contains a name and an email of two users, distructured by map()
 import List from './List';
+//Components to do a route-map
+import { Link, Route} from 'react-router-dom'
+import routesConfig from './routesConfig';
 
 class App extends Component {
 
@@ -45,8 +48,12 @@ class App extends Component {
 
   render() {
     return (
+    <div className="Routering">
       <div className="App">
-       
+
+      {/* Configurating the route*/}
+      <Link to="/">Home</Link>
+      <Link to="/user">User</Link>
         
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -85,6 +92,15 @@ class App extends Component {
         </header>
        
       </div>
+      {routesConfig.map((value, key) => {
+        return <Route
+          key={key}
+          path={value.path}
+          component={value.component}
+          exact={value.exact} 
+        ></Route>
+      })}
+    </div>  
     );
   }
 }
