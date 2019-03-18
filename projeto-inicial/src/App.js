@@ -49,14 +49,20 @@ class App extends Component {
   render() {
     return (
     <div className="Routering">
-      <div className="App">
-
-      {/* Configurating the route*/}
-      <Link to="/">Home</Link>
-      <Link to="/user">User</Link>
-        
+      <div className="App">  
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          {/* Configurating the route*/}
+            <div className="container">
+              <div className="row">
+                  <div className="d-flex">
+                    <Link to="/" style={{ color: '#FFF' }}>Home</Link>
+                  </div>
+                  <div className="d-flex">
+                    <Link to="/user" style={{ color: '#FFF' }}>User</Link>
+                  </div>
+              </div>
+            </div>
           <p>
              Project React.JS mounted using NodeJS!
           </p>
