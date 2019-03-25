@@ -13,9 +13,9 @@ class User extends Component {
           }
       ]
     return (
-      <div className="d-flex justify-content-center">
+      <div>
         <br />
-        <table border="1">
+        <table className="d-flex justify-content-center bg-dark" border="1">
             <tr>
                 <th>Name</th>
                 <th>Email</th>

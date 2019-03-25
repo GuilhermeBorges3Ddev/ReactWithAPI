@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import logo from './logo.svg';
 import Eva from './Eva';
-//This component contains a name and an email of two users, distructured by map()
-import List from './List';
 //Components to do a route-map
 import { Link, Route} from 'react-router-dom'
 import routesConfig from './routesConfig';
@@ -70,31 +68,32 @@ class App extends Component {
           <Eva></Eva>
           <div>
             <form>
-              <label>Name:
-                <input 
-                  type="text" 
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.changeInput}
-                ></input>
-              </label>
-              <label>Email:
-                <input 
-                  type="email" 
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.changeInput}
-                ></input>  
-              </label>
+                <label>Name:
+                  <div className="mx-2">
+                      <input
+                        type="text" 
+                        name="name"
+                        value={this.state.name}
+                        onChange={this.changeInput}
+                      ></input>
+                    </div>
+                </label>
+                <label>Email:
+                  <div className="mx-2">
+                      <input 
+                        type="email" 
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.changeInput}
+                      ></input>
+                   </div>  
+                </label>
             </form>
             {this.state.name} - {this.state.email}
           </div>
           <div>
             <button onClick={this.changeState}>Change state</button>
             <button onClick={this.resetState}>Reset state</button>
-          </div>
-          <div>
-            <List />
           </div>
         </header>
        
