@@ -14,3 +14,11 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 //serviceWorker.unregister();
+
+/*
+Redux was added with some packages:
+    npm i redux
+    npm i react-redux
+    npm i redux-thunk
+    npm i redux-form
+*/
