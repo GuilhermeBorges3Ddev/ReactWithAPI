@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserForm from './UserForm';
 
 class User extends Component {
   render() {
@@ -14,6 +15,7 @@ class User extends Component {
       ]
     return (
       <div>
+        <UserForm></UserForm>
         <br />
         <table className="d-flex justify-content-center bg-dark" border="1">
             <tr>
