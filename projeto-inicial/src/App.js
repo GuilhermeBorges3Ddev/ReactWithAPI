@@ -70,22 +70,26 @@ class App extends Component {
           <Eva></Eva>
           <div>
             <form>
-              <label>Name:
-                <input 
-                  type="text" 
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.changeInput}
-                ></input>
-              </label>
-              <label>Email:
-                <input 
-                  type="email" 
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.changeInput}
-                ></input>  
-              </label>
+                <label>Name:
+                  <div className="mx-2">
+                      <input
+                        type="text" 
+                        name="name"
+                        value={this.state.name}
+                        onChange={this.changeInput}
+                      ></input>
+                    </div>
+                </label>
+                <label>Email:
+                  <div className="mx-2">
+                      <input 
+                        type="email" 
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.changeInput}
+                      ></input>
+                   </div>  
+                </label>
             </form>
             {this.state.name} - {this.state.email}
           </div>
