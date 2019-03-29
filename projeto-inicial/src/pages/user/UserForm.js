@@ -1,6 +1,7 @@
 import {reduxForm, Field} from 'redux-form';
 import {connect} from 'react-redux';
 import React from 'react';
+import {submitUserAction} from "../actions/user/UserAction";
 
 const UserFormFunc = props => {
     
@@ -41,4 +42,4 @@ const mapStateToProps = state => ({
     
 })
 
-export default connect(mapStateToProps)(UserForm)
+export default connect(mapStateToProps, {submitUserAction})(UserForm)
