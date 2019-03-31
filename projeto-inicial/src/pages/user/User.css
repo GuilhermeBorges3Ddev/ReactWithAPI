@@ -1,3 +1,13 @@
+.wrapper{
+    text-align: center !important;
+    padding-top: 10px;
+    background-color: antiquewhite !important;
+}
+
+.user-table{
+    display: inline-block;
+}
+
 .list-table{
     background-color: antiquewhite !important;
 }

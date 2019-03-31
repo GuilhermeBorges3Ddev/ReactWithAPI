@@ -16,25 +16,27 @@ class User extends Component {
           }
       ]
     return (
-      <div className="list-table">
-        <UserForm></UserForm>
-        <br />
-        <table border="1">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-            {list.map((item) => {
-                return <tr>
-                    <td>
-                        {item.name}
-                    </td>
-                    <td>
-                        {item.email}
-                    </td>
-                </tr>
-            })}
-        </table>
+      <div className="wrapper">
+        <div className="list-table">
+          <UserForm></UserForm>
+          <br />
+          <table className="user-table" border="1">
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+              </tr>
+              {list.map((item) => {
+                  return <tr>
+                      <td>
+                          {item.name}
+                      </td>
+                      <td>
+                          {item.email}
+                      </td>
+                  </tr>
+              })}
+          </table>
+        </div>
       </div>
     );
   }
