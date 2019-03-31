@@ -24,7 +24,7 @@ const UserFormFunc = props => {
             <label>
                 Email
             </label>
-            <Field
+            <Field 
                 type="text"
                 component="input"
                 name="email"

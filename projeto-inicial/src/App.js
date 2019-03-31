@@ -54,11 +54,11 @@ class App extends Component {
             <table>
               <tr>
                   <th>
-                    <Link to="/" style={{ color: '#FFF' }}>Home</Link>
+                    <Link to="/" style={{ color: 'black' }}>Home</Link>
                   </th>
                   <th></th>
                   <th>
-                    <Link to="/user" style={{ color: '#FFF' }}>User</Link>
+                    <Link to="/user" style={{ color: 'black' }}>User</Link>
                   </th>
               </tr>
             </table>

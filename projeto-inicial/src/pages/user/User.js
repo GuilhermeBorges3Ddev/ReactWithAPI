@@ -16,7 +16,7 @@ class User extends Component {
           }
       ]
     return (
-      <div className="list-table text-white">
+      <div className="list-table">
         <UserForm></UserForm>
         <br />
         <table border="1">
