@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import UserForm from './UserForm';
 
+import './User.css';
+
 class User extends Component {
   render() {
       let list = [
@@ -14,25 +16,27 @@ class User extends Component {
           }
       ]
     return (
-      <div>
-        <UserForm></UserForm>
-        <br />
-        <table className="d-flex justify-content-center bg-dark" border="1">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-            {list.map((item) => {
-                return <tr>
-                    <td>
-                        {item.name}
-                    </td>
-                    <td>
-                        {item.email}
-                    </td>
-                </tr>
-            })}
-        </table>
+      <div className="wrapper">
+        <div className="list-table">
+          <UserForm></UserForm>
+          <br />
+          <table className="user-table" border="1">
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+              </tr>
+              {list.map((item) => {
+                  return <tr>
+                      <td>
+                          {item.name}
+                      </td>
+                      <td>
+                          {item.email}
+                      </td>
+                  </tr>
+              })}
+          </table>
+        </div>
       </div>
     );
   }
