@@ -4,7 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        Home Page
+        <small className="pl-2">
+          You're on "Home Page", if you like to go to another page click on <u>User</u>
+        </small>
       </div>
     );
   }
