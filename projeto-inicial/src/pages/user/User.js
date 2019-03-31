@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import UserForm from './UserForm';
 
+import './User.css';
+
 class User extends Component {
   render() {
       let list = [
@@ -14,10 +16,10 @@ class User extends Component {
           }
       ]
     return (
-      <div>
+      <div className="list-table text-white">
         <UserForm></UserForm>
         <br />
-        <table className="d-flex justify-content-center bg-dark" border="1">
+        <table border="1">
             <tr>
                 <th>Name</th>
                 <th>Email</th>
